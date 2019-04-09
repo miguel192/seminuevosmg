@@ -1,11 +1,57 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Seminuevos MG</title>
+<%-- 
+    Document   : loginprocess
+    Created on : Apr 8, 2019, 5:07:18 PM
+    Author     : migue_000
+--%>
 
+<%@page import="procesos.procesosbd"%>
+<%@page import="procesos.LoginBean"%>  
+<jsp:useBean id="obj" class="procesos.procesosbd"/>  
+  
+<jsp:setProperty property="*" name="obj"/>  
+  
+<%  
+    String pass = request.getParameter("pass").toString();
+    String user = request.getParameter("user").toString();
+boolean status=procesosbd.validate(obj);  
+if(status){  
+out.println("You r successfully logged in");  
+session.setAttribute("session","TRUE");  
+<b:base title="${initParam.tema}">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" type="text/css" href="/fase3herramientasjava/foundation-6.5.1-complete/css/foundationnew.css" media="screen" />
+<style>
+    #box {
+  padding:5px;
+  width:200px;
+  z-index:10;
+  position:relative;  
+}
+#box form {
+ background:#006699;
+ padding:5px;
+ display:none;
+ position:absolute;
+ top:27px;
+}
+#button {
+  width:75px;
+  background:#006699;
+  color:#fff;
+  padding:3px 10px;
+  border:1px solid #006699;  
+  margin-bottom:15px;  
+  cursor:pointer;
+}
+input[type="submit"] {
+  background:none;
+  color:#fff;
+  border:none;
+  text-align:left;
+  cursor:pointer;
+}
+    
+</style>
 <style>
     .slider {
 	width: 100%;
@@ -66,7 +112,6 @@
 <li><a style="color: white !important" href="#">Nosotros</a></li>
 <li><a style="color: white !important" href="#">Servicios</a></li>
 <li><a style="color: white !important" href="#">Vehiculos</a></li>
-<li><a style="color: white !important" href="#">Login</a></li>
 </ul>
 </div>
 </div>
@@ -327,5 +372,20 @@
 <script>
       $(document).foundation();
     </script>
+    <script>
+        $("#button").click(function() {  
+  $("#box form").toggle("slow");
+  return false;
+});
+    </script>
 </body>
-</html>
+</b:base>
+}  
+else  
+{  
+out.print("Sorry, email or password error");  
+%>  
+<jsp:include page="index.jsp"></jsp:include>  
+<%  
+}  
+%> 

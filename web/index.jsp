@@ -1,11 +1,43 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Seminuevos MG</title>
-
+<%-- 
+    Document   : index
+    Created on : Apr 8, 2019, 4:00:23 PM
+    Author     : migue_000
+--%>
+<b:base title="${initParam.tema}">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" type="text/css" href="/fase3herramientasjava/foundation-6.5.1-complete/css/foundationnew.css" media="screen" />
+<style>
+    #box {
+  padding:5px;
+  width:200px;
+  z-index:10;
+  position:relative;  
+}
+#box form {
+ background:#006699;
+ padding:5px;
+ display:none;
+ position:absolute;
+ top:27px;
+}
+#button {
+  width:75px;
+  background:#006699;
+  color:#fff;
+  padding:3px 10px;
+  border:1px solid #006699;  
+  margin-bottom:15px;  
+  cursor:pointer;
+}
+input[type="submit"] {
+  background:none;
+  color:#fff;
+  border:none;
+  text-align:left;
+  cursor:pointer;
+}
+    
+</style>
 <style>
     .slider {
 	width: 100%;
@@ -66,7 +98,14 @@
 <li><a style="color: white !important" href="#">Nosotros</a></li>
 <li><a style="color: white !important" href="#">Servicios</a></li>
 <li><a style="color: white !important" href="#">Vehiculos</a></li>
-<li><a style="color: white !important" href="#">Login</a></li>
+<li><div id="box">
+     <span id="button">Login</span>
+    <form action="" id="form">
+        <p><input type="text" placeholder="username" name="user"/></p>
+      <p><input type="password" placeholder="password" name="pass" /></p>
+      <p><input type="submit" value="Sign in" /></p>
+    </form>
+</div></li>
 </ul>
 </div>
 </div>
@@ -327,5 +366,11 @@
 <script>
       $(document).foundation();
     </script>
+    <script>
+        $("#button").click(function() {  
+  $("#box form").toggle("slow");
+  return false;
+});
+    </script>
 </body>
-</html>
+</b:base>
