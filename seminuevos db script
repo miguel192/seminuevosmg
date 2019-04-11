@@ -1,0 +1,65 @@
+/* SQL Manager Lite for MySQL                              5.7.2.52112 */
+/* ------------------------------------------------------------------- */
+/* Host     : localhost                                                */
+/* Port     : 3306                                                     */
+/* Database : seminuevos                                               */
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES 'latin1' */;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+CREATE DATABASE `seminuevos`
+    CHARACTER SET 'latin1'
+    COLLATE 'latin1_swedish_ci';
+
+USE `seminuevos`;
+
+/* Structure for the `carros` table : */
+
+CREATE TABLE `carros` (
+  `Id` INTEGER(11) NOT NULL,
+  `anio` INTEGER(11) NOT NULL,
+  `modelo` CHAR(20) COLLATE latin1_swedish_ci NOT NULL,
+  `descripcion` VARCHAR(20) COLLATE latin1_swedish_ci NOT NULL,
+  `precio` INTEGER(11) NOT NULL,
+  PRIMARY KEY USING BTREE (`Id`)
+) ENGINE=InnoDB
+MIN_ROWS=2 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci'
+;
+
+/* Structure for the `usuario` table : */
+
+CREATE TABLE `usuario` (
+  `Id` INTEGER(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(20) COLLATE latin1_swedish_ci NOT NULL,
+  `cargo` CHAR(20) COLLATE latin1_swedish_ci NOT NULL,
+  `contrasena` VARCHAR(20) COLLATE latin1_swedish_ci NOT NULL,
+  PRIMARY KEY USING BTREE (`Id`),
+  UNIQUE KEY `Id` USING BTREE (`Id`)
+) ENGINE=InnoDB
+AUTO_INCREMENT=4 MIN_ROWS=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci'
+;
+
+/* Data for the `carros` table  (LIMIT 0,500) */
+
+INSERT INTO `carros` (`Id`, `anio`, `modelo`, `descripcion`, `precio`) VALUES
+  (1,2006,'tsuru','carro semi nuevo',25800),
+  (2,2009,'subaru','carro nuevo',60000),
+  (3,2010,'mazda','carro semi nuevo',110000);
+COMMIT;
+
+/* Data for the `usuario` table  (LIMIT 0,500) */
+
+INSERT INTO `usuario` (`Id`, `nombre`, `cargo`, `contrasena`) VALUES
+  (1,'miguel','gerente','123'),
+  (2,'pedro','ventas','abc'),
+  (3,'juan','sub','abcd');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
