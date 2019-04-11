@@ -7,6 +7,7 @@ package procesos;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -20,14 +21,14 @@ Connection con=conexion.getCon();
               
 PreparedStatement ps=con.prepareStatement(  
         
-    "select * from user432 where email=? and pass=?");  
+    "select * from user where email=? and pass=?");  
   
 ps.setString(1,bean.getUser());  
 ps.setString(2, bean.getPass());  
               
 ResultSet rs=ps.executeQuery();  
 status=rs.next();  
-              
+
 }catch(Exception e){}  
   
 return status;  

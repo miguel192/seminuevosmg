@@ -100,7 +100,7 @@ input[type="submit"] {
 <li><a style="color: white !important" href="#">Vehiculos</a></li>
 <li><div id="box">
      <span id="button">Login</span>
-    <form action="" id="form">
+     <form action="loginprocess.jsp" id="form">
         <p><input type="text" placeholder="username" name="user"/></p>
       <p><input type="password" placeholder="password" name="pass" /></p>
       <p><input type="submit" value="Sign in" /></p>
@@ -250,93 +250,102 @@ input[type="submit"] {
 </div>
 <div class="row">
 <div class="medium-4 columns">
-<h4>Top Products</h4>
+<h4>Seminuevos</h4>
 <div class="media-object">
 <div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara13.jpg">
 </div>
 <div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
+<h5>Charger SRT-8 2008</h5>
+<p>Chip, repro, nitro,papeles en regla, exelentes condiciones generales.</p>
+<p>$269,000</p>
 </div>
 </div>
 <div class="media-object">
 <div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara10.jpg">
 </div>
 <div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
+<h5>Lobo FX2 2008</h5>
+<p>Cabina y media papeles en regla, exelentes condiciones generales.</p>
+<p>$159,000</p>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara9.jpg">
+</div>
+<div class="media-object-section">
+<h5>Ibiza 2010</h5>
+<p>papeles en regla, exelentes condiciones generales.</p>
+<p>$109,000</p>
 </div>
 </div>
 </div>
 
 <div class="medium-4 columns">
-<h4>Top Products</h4>
+<h4>Seminuevos</h4>
 <div class="media-object">
 <div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara8.jpg">
 </div>
 <div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
+<h5>CR-V 2013</h5>
+<p>La mas equipada, piel, quemacocos, papeles en regla, exelentes condiciones generales.</p>
+<p>$249,000</p>
 </div>
 </div>
  <div class="media-object">
 <div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara7.jpg">
 </div>
 <div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
+<h5>Denalli Taho 2008</h5>
+<p>La mas esquipa en su tipo,papeles en regla, exelentes condiciones generales.</p>
+<p>$189,000</p>
 </div>
 </div>
 <div class="media-object">
 <div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara6.jpg">
 </div>
 <div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
+<h5>Sentra SR 2012</h5>
+<p>electrico, rines,papeles en regla, exelentes condiciones generales.</p>
+<p>$109,000</p>
 </div>
 </div>
 </div>
 <div class="medium-4 columns">
-<h4>Top Products</h4>
+<h4>Seminuevos</h4>
 <div class="media-object">
 <div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara5.jpg">
 </div>
 <div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
+<h5>Element 2001</h5>
+<p>Poco kilometraje, papeles en regla, exelentes condiciones generales.</p>
+<p>$119,000</p>
 </div>
 </div>
 <div class="media-object">
 <div class="media-object-section">
-<img class="thumbnail" src="https://placehold.it/100x100">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara3.jpg">
 </div>
 <div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
+<h5>Focus ST 2015</h5>
+<p>Piel, quemacocos, papeles en regla, exelentes condiciones generales.</p>
+<p>$269,000</p>
+</div>
+</div>
+<div class="media-object">
+<div class="media-object-section">
+<img class="thumbnail" src="/fase3herramientasjava/imagenes/cara1.jpg">
+</div>
+<div class="media-object-section">
+<h5>JEEP 4x4 2012</h5>
+<p>Exelente jeep 4X4, papeles en reglas varios extras, rines 20'</p>
+<p>$249,000</p>
 </div>
 </div>
 </div>
