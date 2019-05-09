@@ -15,11 +15,12 @@ Sistema web
 6.	Base de datos: la base de datos por lo menos tiene que contar con 10 tablas, para poder realizar altas bajas y modificaciones de vehículos, además de altas bajas modificaciones de los usuarios, que para el sistema no se tiene programados mas que un solo tipo de usuario, no será una base datos muy robusta por que el número de vehículos que manejan entre todas sus sucursales no rebasan más de 60 vehículos.
 
 Arquitectura:
- 
-
-
+la qrquitectura que se uso dentro de este proyecto fue la de cascada que era la que mas se adecuaba al proyecto.
 b.	Tabla de contenidos (ToC) con enlaces o a la sección wiki dentro del repositorio o algún medio externo como ReadTheDocs.io
-
+documentacion--------------------------1
+requerimietos--------------------------2
+instalacion----------------------------3
+configuracion--------------------------4
 
 
 2.	Requerimientos:
@@ -37,17 +38,85 @@ No se tiene que instalar nada ya que es en plataforma web, lo único que se tend
 b.	¿Cómo ejecutar pruebas manualmente?
 Las pruebas que se podrían realizar serian solo en la parte del administrador y seria probar el subir nuevos carros, editar carros y eliminar carros son las únicas pruebas que se pueden realizar.
 c.	¿Cómo implementar la solución en producción en un ambiente local o en la nube como Heroku?
+solo se necesita tener acceso a la repositorio github para tener el proyecto y a si de esa manera poderlo poderlo implentar ya sea un ambiente local o ambiente en linea.
+
 4.	Configuración:
 a.	Configuración del producto (archivos de configuración).
+solo se necsita el conectos sql que ya viene isntalado en el proyecto, pero se necesita la configuracion en conjutno con el netbeans para poder hacer uso de las bases de datos.
 b.	Configuración de los requerimientos.
+solo se necesita netbeans 8.0, glassfish, mysql workbeanch y un navegador no se necesita configuracion de nada 
+
 5.	Uso:
 a.	Sección de referencia para usuario final. Manual que se hará referencia para usuarios finales.
+el usuario normal que no sea administrativo solo podra observar el sistema no es necesario un manual como tal solo necesita:
+abrir su navegador
+poner la url de la pagina.
+navegar por el sisitema.
 b.	Sección de referencia para usuario administrador.
+para el usuario administrador solo es necesario que:
+abrir su navegador
+poner la url de la pagina.
+iniciar sesion
+introducir nombre y contrsena.
+navegar por la parte de administracion del sistema.
+si requiere agregar un nuevo carro precionar el boton agrregar y llenar el formulario como tal, dar clic en aceptar.
+si requiere modificar un carro presionar el boton modificar y modficar el formulario, dar clic en aceptar.
+si se requiere eliminar un carro presionar el boto eliminar y seleccionar el carro que quiera eliminar, dar clic en aceptar.
+
 6.	Contribución:
 a.	Guía de contribución para usuarios.
+el proyecto no contara con este apartado ya que es un proyecto privado y nadie mas podra hacer uso del codigo.
 b.	Debe contar con pasos específicos para clonar repositorio, crear un nuevo branch, enviar el pull request, esperar a hacer el merge.
+Clonar el repositorio
+Después de tener el repositorio en nuestra cuenta, seleccionar la dirección del repositorio "SSH o HTTP" y clonar:
+
+$ git clone https://github.com/User/NombreRepo.git
+
+Dentro de la carpeta que genera, comprobar la URL del repositorio:
+
+$ git remote -v
+
+Antes de realizar modificaciones agregar la URL del repositorio original del proyecto:
+
+$ git remote add upstream https://github.com/User/RepoOriginal(Forkeado)
+
+Comprobar
+
+$ git remote -v
+
+Actualizar la rama Master
+Antes de empezar a trabajar, obtener los últimos cambios del Repo Original:
+
+$ git pull -r upstream master
+
+Crear una Rama
+Para crear una rama usar la opción "checkout" de git:
+
+$ git checkout -b feature-nombre-rama
+
+Hacer cambios
+Realizar todos los cambios que se desea hacer al proyecto.
+
+Agregar los archivos y hacer un commit
+
+Después de realizar el commit hacer el push hacia nuestro repositorio indicando la rama que hemos creado.
+
+$ git push origin feature-nombre-rama
+
+Hacer un Pull Request
+Hacer click en "Compare & Pull Request"
+
+Escribir cambios del Pull Request.
+
+Si todo está bien, enviar con el botón "Send Pull Request".
+
+Esperar a que el duelo del repositorio lo revise, acepte y mezcle en la rama correspondiente.
+
+
 7.	Roadmap:
 a.	Requerimientos que se implementarán en un futuro.
-Producto
-1.	Video de demostración con los requerimientos cumplidos.
-2.	Acceso al producto si se implementó en la nube, de lo contrario se requiere el/los WAR/JARs
+se implementara un tipo de administrador mas amplio para que pueda hacer mas modificaciones como agregar nuevos administradores o incluir nuevas funciones de administrador.
+se implementara una galeria nueva con nuestros mejores clientes que tenemos dentro del sistema 
+se implementara una app movil 
+
+
